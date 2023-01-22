@@ -13,11 +13,7 @@ export function getCountryOnInput(e){
     if(e.target.className === 'country-list__name') {
                         
            inputEl.value = e.target.outerText;
-
-            let nameContry = e.target;
-            
-            console.dir(nameContry)
-           
+              
             fetchCountries(e.target.outerText)
             
             .then(сountrys => {
@@ -34,7 +30,7 @@ export function getCountryOnInput(e){
                })
     } 
     else return;
-        
+    inputEl.value = '';
 
 }
      
